@@ -1,5 +1,6 @@
 import { User } from "../../entity/user.entity";
 import { AppDataSource } from "../../data-source";
+
 const listUsersService = async () => {
   const userRepository = AppDataSource.getRepository(User);
   const users = userRepository.find();
