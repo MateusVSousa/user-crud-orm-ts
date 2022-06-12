@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import getUserIdService from "../services/user/getUserId.servicec";
+import getUserIdService from "../services/user/getUserId.service";
 
 const getUserIdController = async (req: Request, res: Response) => {
   try {
