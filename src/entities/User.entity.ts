@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
+import { Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity()
@@ -6,17 +6,17 @@ export class User {
   @PrimaryColumn("uuid")
   readonly id: string;
   @Column()
-  name: string;
+  name?: string;
   @Column()
   email: string;
   @Column()
   password: string;
   @Column()
-  age: number;
-  @Column()
-  createAt: Date;
-  @Column()
-  updateAt: Date;
+  age?: number;
+  @CreateDateColumn()
+  createAt?: Date;
+  @UpdateDateColumn()
+  updateAt?: Date;
 
   constructor() {
     if (!this.id) {

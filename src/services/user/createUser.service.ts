@@ -1,5 +1,5 @@
 import { IUserCreate } from "../../interfaces/users";
-import { User } from "../../entity/user.entity";
+import { User } from "../../entities/User.entity";
 import { AppDataSource } from "../../data-source";
 import bcrypt from "bcrypt";
 
